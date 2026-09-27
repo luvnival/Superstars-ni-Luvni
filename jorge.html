@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Jorge ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+              height: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+
+            font-family: "DM Sans", sans-serif;
+
+            background:
+                radial-gradient(circle at 10% 15%, #b9ddf7, transparent 30%),
+                radial-gradient(circle at 90% 15%, #d4c6f2, transparent 30%),
+                radial-gradient(circle at 15% 90%, #c8e5f8, transparent 30%),
+                radial-gradient(circle at 90% 90%, #e2d8f5, transparent 30%),
+                #f7fbff;
+
+            color: #4d6175;
+
+            position: relative;
+
+            overflow-x: hidden;
+              overflow-y: auto;
+        }
+
+        /* Light blue and purple side decorations */
+
+        body::before,
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            top: 0;
+            bottom: 0;
+
+            width: 95px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #b5daf3 0%,
+                    #8fc5e9 25%,
+                    #c9b8e9 50%,
+                    #a9d1ed 75%,
+                    #d5c8ef 100%
+                );
+
+            border-left: 5px solid rgba(255,255,255,0.5);
+            border-right: 5px solid rgba(255,255,255,0.5);
+
+            box-shadow:
+                inset 0 0 20px rgba(74, 125, 170, 0.10);
+
+            z-index: -1;
+        }
+
+        body::before {
+            left: 0;
+        }
+
+        body::after {
+            right: 0;
+        }
+
+        .letter {
+            width: 100%;
+
+            max-width: 680px;
+
+            padding: 45px;
+
+            background: rgba(255,255,255,0.94);
+
+            border: 2px solid #c4dced;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 15px 40px rgba(87, 125, 160, 0.15);
+
+            animation: appear 0.8s ease;
+
+            position: relative;
+        }
+
+        /* Simple corner details */
+
+        .letter::before {
+            content: "◆";
+
+            position: absolute;
+
+            top: 18px;
+            left: 23px;
+
+            font-size: 17px;
+
+            color: #6ca9d6;
+        }
+
+        .letter::after {
+            content: "◆";
+
+            position: absolute;
+
+            bottom: 18px;
+            right: 23px;
+
+            font-size: 17px;
+
+            color: #927bc3;
+        }
+
+        .heart {
+            text-align: center;
+
+            font-size: 38px;
+
+            color: #679dca;
+
+            margin-bottom: 10px;
+
+            animation: heartbeat 2s infinite;
+        }
+
+        h1 {
+            text-align: center;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 43px;
+
+            color: #4d83b2;
+
+            margin-bottom: 30px;
+        }
+
+        h1::after {
+            content: "—  ◆  —";
+
+            display: block;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 13px;
+
+            color: #9580c1;
+
+            margin-top: 7px;
+
+            letter-spacing: 5px;
+        }
+
+        .message {
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: #5f7181;
+        }
+
+        .message p {
+            margin-bottom: 18px;
+        }
+
+        .message p:last-child {
+            color: #638bb1;
+
+            font-weight: 500;
+        }
+
+        .back {
+            display: block;
+
+            width: fit-content;
+
+            margin: 30px auto 0;
+
+            padding: 12px 24px;
+
+            background: #b8d8ef;
+
+            color: #3f6685;
+
+            text-decoration: none;
+
+            border: 1px solid #9fc8e5;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            transform: translateY(-3px);
+
+            background: #b8a6dc;
+
+            color: white;
+
+            border-color: #9c88ca;
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.10);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            body::before,
+            body::after {
+                width: 35px;
+            }
+
+            .letter {
+                padding: 30px 25px;
+
+                border-radius: 18px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            .message {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="letter">
+
+        <div class="heart">♡</div>
+
+        <h1>For JC</h1>
+
+        <div class="message">
+
+            <p>Dear Golgi ,</p>
+
+            <p>
+                Jc, I’m really grateful that I got to know you, but more than anything, I’m grateful for the way you treat Elisha.  </p>
+
+            <p>
+                It means a lot to see her with someone who genuinely cares for her, respects her, and makes her happy. Thank you for being good to her and for being someone she can feel safe and comfortable with. I hope you both continue to bring out the best in each other and make plenty of good memories together. </p>
+
+            <p>
+                I’m glad you’re part of her life.
+            </p>
+
+            <p>— Hulog pa kanal</p>
+
+        </div>
+
+        <a href="index.html" class="back">
+            ← Back to the names
+        </a>
+
+    </div>
+
+</body>
+
+  </html>
