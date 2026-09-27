@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Rhys ♡</title>
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 15%, #ffdce5, transparent 30%),
+        radial-gradient(circle at 85% 15%, #ffeaf0, transparent 30%),
+        radial-gradient(circle at 20% 90%, #ffd4df, transparent 30%),
+        radial-gradient(circle at 85% 90%, #ffe5eb, transparent 30%),
+        #fff5f7;
+
+    padding: 70px 20px;
+}
+
+
+/* =========================
+   GINGHAM SIDE PILLARS
+========================= */
+
+body::before,
+body::after {
+    content: "";
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    width: 95px;
+
+    background-color: #f9d4de;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(210, 95, 125, 0.18) 50%,
+            transparent 50%
+        ),
+        linear-gradient(
+            rgba(210, 95, 125, 0.18) 50%,
+            transparent 50%
+        );
+
+    background-size: 30px 30px;
+
+    z-index: 0;
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,0.55);
+}
+
+body::before {
+    left: 0;
+    border-right: 4px solid rgba(255,255,255,0.7);
+}
+
+body::after {
+    right: 0;
+    border-left: 4px solid rgba(255,255,255,0.7);
+}
+
+
+/* =========================
+   TOP LACE
+========================= */
+
+.lace {
+    position: fixed;
+
+    top: 0;
+    left: 95px;
+    right: 95px;
+
+    height: 55px;
+
+    background: #fffafa;
+
+    border-bottom: 2px solid #efc3ce;
+
+    z-index: 2;
+
+    box-shadow: 0 3px 10px rgba(190, 90, 120, 0.10);
+}
+
+
+/* lace pattern */
+
+.lace::after {
+    content: "⌒  ⌒  ⌒  ⌒  ⌒  ⌒  ⌒  ⌒  ⌒";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -15px;
+
+    text-align: center;
+
+    color: #fffafa;
+
+    font-size: 30px;
+
+    line-height: 20px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    position: relative;
+
+    width: 90%;
+    max-width: 700px;
+
+    min-height: 70vh;
+    height: auto;
+
+    margin: 30px auto;
+
+    padding: 50px 50px 45px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 3px solid #edaabd;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 30px rgba(210, 105, 135, 0.18);
+
+    z-index: 1;
+}
+
+
+/* =========================
+   LETTER DECORATIONS
+========================= */
+
+.letter::before {
+    content: "♡   ✦   ♡";
+
+    position: absolute;
+
+    top: 15px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: #e68ba3;
+
+    font-size: 18px;
+
+    letter-spacing: 7px;
+}
+
+.letter::after {
+    content: "✦   ♡   ✦";
+
+    position: absolute;
+
+    bottom: 15px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: #e68ba3;
+
+    font-size: 17px;
+
+    letter-spacing: 7px;
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.big-heart {
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #e9829d;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    color: #d96d88;
+
+    margin-bottom: 32px;
+
+    letter-spacing: 1px;
+}
+
+h1::before {
+    content: "♡ ";
+}
+
+h1::after {
+    content: " ♡";
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    color: #65545a;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    text-align: left;
+}
+
+.message p {
+    margin-bottom: 21px;
+}
+
+.message p:first-child {
+    color: #d96d88;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature {
+    text-align: right;
+
+    color: #d96d88;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+    display: block;
+
+    width: fit-content;
+
+    margin: 35px auto 0;
+
+    padding: 11px 24px;
+
+    text-decoration: none;
+
+    color: #c75d77;
+
+    background: #fff0f3;
+
+    border: 2px solid #e5a0b1;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    box-shadow: 0 4px 10px rgba(210, 100, 130, 0.10);
+}
+
+.back-button:hover {
+    background: #e58aa0;
+
+    color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 65px 45px 40px;
+    }
+
+    body::before,
+    body::after {
+        width: 35px;
+
+        background-size: 22px 22px;
+    }
+
+    body::before {
+        border-right: 3px solid rgba(255,255,255,0.7);
+    }
+
+    body::after {
+        border-left: 3px solid rgba(255,255,255,0.7);
+    }
+
+    .lace {
+        left: 35px;
+        right: 35px;
+    }
+
+    .letter {
+        width: 95%;
+
+        padding: 45px 25px 40px;
+
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .big-heart {
+        font-size: 35px;
+    }
+
+    .message {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- TOP LACE -->
+<div class="lace"></div>
+
+
+<!-- LETTER -->
+
+<div class="letter">
+
+    <div class="big-heart">♡</div>
+
+    <h1>For Rhys</h1>
+
+    <div class="message">
+
+        <p>My Dearest Warmth, Ris</p>
+
+        <p>
+              Ris, I'm really glad our path crossed and 
+            I got to be your friend. That despite all 
+            the odds i got to be a part of ur life.
+        </p>
+
+        <p>
+              I am beyond grateful for everything you do for me,
+            that even with the large distance between us, you 
+            still manage to be my warmth.Thank you for all the 
+            memories we had together, the challenges we decide
+            to face together, and the lesson we learned from
+            one another. For whatever might be brought upon us,
+            i want you to know that i will always be proud of
+            you, and that i will always be by your side.
+        </p>
+
+        <p>
+            No matter how much time passes, I hope you know that
+            I'll always appreciate the friendship and the memories
+            we've made.
+        </p>
+
+        <p class="signature">
+            — Love, Luvni
+        </p>
+
+    </div>
+
+
+    <a href="index.html" class="back-button">
+        ← Back to the names♡
+    </a>
+
+</div>
+
+</body>
+</html>
