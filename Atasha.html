@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For Tasha♡</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+    height: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            #fff0a8 0%,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            #ffd1dc 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            #ffe6a3 0%,
+            transparent 38%
+        ),
+
+        #fffaf0;
+
+    color: #66584a;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: relative;
+}
+
+
+/* =========================
+   BAKING DECORATIONS
+========================= */
+
+/* top-left decorations */
+
+body::before {
+    content: "🧁   🍪   🥐";
+
+    position: fixed;
+
+    top: 25px;
+
+    left: 25px;
+
+    font-size: 25px;
+
+    letter-spacing: 5px;
+
+    transform: rotate(-6deg);
+
+    opacity: 0.85;
+
+    z-index: 0;
+}
+
+
+/* bottom-right decorations */
+
+body::after {
+    content: "🥄   🍰   🧁";
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    font-size: 24px;
+
+    letter-spacing: 4px;
+
+    transform: rotate(6deg);
+
+    opacity: 0.85;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    width: 100%;
+
+    max-width: 680px;
+
+    padding: 45px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border:
+        2px solid
+        rgba(255, 225, 150, 0.7);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(190, 145, 70, 0.18);
+
+    animation:
+        appear 0.8s ease;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   LITTLE BAKING DETAILS
+========================= */
+
+.letter::before {
+    content: "🍪";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 25px;
+
+    font-size: 23px;
+
+    transform: rotate(-12deg);
+}
+
+
+.letter::after {
+    content: "🥐";
+
+    position: absolute;
+
+    bottom: 18px;
+
+    right: 25px;
+
+    font-size: 23px;
+
+    transform: rotate(10deg);
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart {
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #e7a0aa;
+
+    margin-bottom: 10px;
+
+    animation:
+        heartbeat 2s infinite;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    text-align: center;
+
+    font-family:
+        "Playfair Display", serif;
+
+    font-size: 43px;
+
+    font-weight: 600;
+
+    color: #9a7435;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #6f6252;
+}
+
+
+.message p {
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+    display: block;
+
+    width: fit-content;
+
+    margin:
+        30px auto 0;
+
+    padding:
+        12px 22px;
+
+    background:
+        #ffe9a8;
+
+    color:
+        #80652f;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+
+.back:hover {
+    transform:
+        translateY(-3px);
+
+    background:
+        #ffd5df;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+
+    .letter {
+        padding: 30px 25px;
+    }
+
+
+    h1 {
+        font-size: 35px;
+    }
+
+
+    .message {
+        font-size: 15px;
+    }
+
+
+    body::before,
+    body::after {
+        font-size: 18px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .letter::before,
+    .letter::after {
+        font-size: 18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+    <div class="letter">
+
+
+        <div class="heart">
+            ♡
+        </div>
+
+
+        <h1 id="name">
+            For Atasha
+        </h1>
+
+
+        <div class="message">
+
+
+            <p id="greeting">
+                My Dearest Sister Tash,
+            </p>
+
+
+            <p id="message1">
+                
+Tash, I hope you know that you’re deeply appreciated, and I’m really lucky to have you in my life.
+            </p>
+
+
+            <p id="message2">
+              Thank you for all the laughs, conversations, random moments, and memories we've shared. For all the times you stayed by my side because you knew I needed you, and even for the little moments when you thought of me. I appreciate every single one of them more than you know. Thank you for being someone I can laugh with, talk to, and simply be myself around. I’m really grateful that life allowed me to meet someone like you. You’ve become such an important part of my life, and I hope you know how much your presence means to me. I’m proud of the person you are and of how far you’ve come. No matter where life takes us, I hope you always remember that you have someone who believes in you and will always be cheering you on. I’ll always treasure the memories we’ve made and look forward to all the ones we haven’t made yet.
+            </p>
+
+
+            <p id="message3">
+            Thank you for being there for me in both the big moments and the little ones, I’ll always be grateful for you.
+            </p>
+
+
+            <p>
+                — Love, Luv
+            </p>
+
+
+        </div>
+
+
+        <a href="index.html"
+           class="back">
+
+            ← Back to the names
+
+        </a>
+
+
+    </div>
+
+
+<script>
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const name =
+        params.get("name");
+
+
+    if (name) {
+
+        document.getElementById("name").textContent =
+            "For " + name;
+
+
+        document.getElementById("greeting").textContent =
+            "Dear " + name + ",";
+
+
+        document.title =
+            "For " + name + " ♡";
+
+    }
+
+</script>
+
+
+</body>
+
+  </html>
