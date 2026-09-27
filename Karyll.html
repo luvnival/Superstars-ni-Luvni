@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Karel ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            height: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+
+            font-family: "DM Sans", sans-serif;
+
+            /* Soft creamy yellow background */
+            background:
+                radial-gradient(circle at 10% 10%, #f8edc8, transparent 30%),
+                radial-gradient(circle at 90% 15%, #f5e7b5, transparent 30%),
+                radial-gradient(circle at 15% 90%, #f3e5b9, transparent 30%),
+                radial-gradient(circle at 90% 90%, #faf0ce, transparent 30%),
+                #fffdf4;
+
+            color: #68604c;
+
+            position: relative;
+
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+
+        /* Soft yellow side glow */
+
+        body::before,
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            top: 0;
+            bottom: 0;
+
+            width: 75px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(244, 226, 166, 0.45),
+                    rgba(250, 237, 194, 0.35),
+                    rgba(238, 218, 157, 0.40),
+                    rgba(250, 239, 201, 0.35)
+                );
+
+            box-shadow:
+                inset 0 0 0 5px rgba(255,255,255,0.28),
+                0 0 30px rgba(180,150,70,0.08);
+
+            opacity: 0.75;
+
+            z-index: -1;
+        }
+
+        body::before {
+            left: 0;
+
+            border-radius: 0 25px 25px 0;
+        }
+
+        body::after {
+            right: 0;
+
+            border-radius: 25px 0 0 25px;
+        }
+
+
+        /* Letter */
+
+        .letter {
+            width: 100%;
+
+            max-width: 680px;
+
+            padding: 45px;
+
+            background: rgba(255, 254, 246, 0.94);
+
+            border: 2px solid rgba(224, 205, 147, 0.45);
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 15px 40px rgba(125, 110, 70, 0.12);
+
+            animation: appear 0.8s ease;
+
+            position: relative;
+        }
+
+
+        /* Small decorations */
+
+        .letter::before {
+            content: "✦";
+
+            position: absolute;
+
+            top: 17px;
+            left: 22px;
+
+            font-size: 20px;
+
+            color: #d6bd72;
+
+            opacity: 0.75;
+        }
+
+        .letter::after {
+            content: "✦";
+
+            position: absolute;
+
+            bottom: 17px;
+            right: 22px;
+
+            font-size: 20px;
+
+            color: #d6bd72;
+
+            opacity: 0.75;
+
+            transform: scaleX(-1);
+        }
+
+
+        /* Heart */
+
+        .heart {
+            text-align: center;
+
+            font-size: 40px;
+
+            color: #d5bd76;
+
+            margin-bottom: 10px;
+
+            animation: heartbeat 2s infinite;
+        }
+
+
+        /* Title */
+
+        h1 {
+            text-align: center;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 43px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #b9a05b,
+                    #d0b66b,
+                    #c3a65e,
+                    #d8c27d,
+                    #b99d53
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* Message */
+
+        .message {
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: #69614e;
+        }
+
+        .message p {
+            margin-bottom: 18px;
+        }
+
+
+        /* Back button */
+
+        .back {
+            display: block;
+
+            width: fit-content;
+
+            margin: 30px auto 0;
+
+            padding: 12px 22px;
+
+            background: #f3e7bc;
+
+            color: #75643b;
+
+            text-decoration: none;
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(205, 182, 111, 0.25);
+
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            transform: translateY(-3px);
+
+            background: #ead9a4;
+
+            color: #62532d;
+
+            box-shadow:
+                0 6px 15px rgba(170, 145, 70, 0.12);
+        }
+
+
+        /* Animations */
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            body::before,
+            body::after {
+                width: 30px;
+            }
+
+            .letter {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            .message {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="letter">
+
+        <div class="heart">♡</div>
+
+        <h1>For Karel</h1>
+
+        <div class="message">
+
+            <p>My Dear Sunshine, Karel</p>
+
+            <p>
+                Karel, I’m really thankful that life gave me the chance to know someone like you. You have such a warm and caring heart, and I’ve always admired how naturally you make people feel seen and understood.
+            </p>
+
+            <p>
+                You’re the kind of person who can make someone feel better without even trying too hard, and I hope you know how meaningful that is. One of the things I love most about you is how lively you are. You bring so much energy wherever you go, and somehow, even the most ordinary moments become more fun when you’re around. Your jokes, random stories, and the way you can make everyone laugh are memories I’ll always cherish. But beyond all the fun, I really appreciate the way you care. You take the time to listen, understand where people are coming from, and make them feel like their feelings matter. There’s something really special about having a friend who can make you laugh one moment and genuinely listen to you the next. Thank you for all the little memories, the unexpected laughs, the conversations, and the moments that made our friendship what it is. I hope you never lose the warmth and energy that make you who you are. The people around you are lucky to have someone who can bring both comfort and happiness into their lives.
+            </p>
+
+            <p>
+                I’m genuinely glad that you’re someone I get to call my friend. I’ll always be grateful for the memories we’ve made, and I hope there are still countless more laughs, stories, and unforgettable moments waiting for us.
+            </p>
+
+            <p>
+                — Love, Val
+            </p>
+
+        </div>
+
+        <a href="index.html" class="back">
+            ← Back to the names
+        </a>
+
+    </div>
+
+</body>
+
+</html>
