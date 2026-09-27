@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For Xamantha ♡</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    min-height: 100vh;
+    height: auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 55px 20px;
+
+    font-family: "DM Sans", sans-serif;
+
+    color: #654c4c;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: relative;
+
+    /* COLORS INSPIRED BY THE FLOWER PHOTO */
+
+    background:
+
+        radial-gradient(
+            circle at 8% 12%,
+            #d92f6d 0%,
+            transparent 27%
+        ),
+
+        radial-gradient(
+            circle at 92% 15%,
+            #f05b58 0%,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 12% 85%,
+            #9b9b3d 0%,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 88% 85%,
+            #c94d57 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            #f3a05d 0%,
+            transparent 35%
+        ),
+
+        #f8d2a8;
+}
+
+
+/* =========================
+   BACKGROUND FLOWERS
+========================= */
+
+body::before {
+
+    content: "✿   ❀   ✿   ❁   ✿";
+
+    position: fixed;
+
+    top: 22px;
+    left: 25px;
+
+    font-size: 25px;
+
+    letter-spacing: 10px;
+
+    color: #a71955;
+
+    opacity: 0.9;
+
+    transform: rotate(-8deg);
+
+    z-index: 0;
+
+    animation:
+        floatFlowers 4s ease-in-out infinite;
+}
+
+
+body::after {
+
+    content: "❀   ✿   ❁   ✿   ❀";
+
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    font-size: 25px;
+
+    letter-spacing: 9px;
+
+    color: #6f772f;
+
+    opacity: 0.9;
+
+    transform: rotate(8deg);
+
+    z-index: 0;
+
+    animation:
+        floatFlowers 5s ease-in-out infinite reverse;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+
+    width: 100%;
+
+    max-width: 680px;
+
+    padding: 45px;
+
+    background:
+        rgba(255, 249, 239, 0.94);
+
+    border:
+        2px solid
+        rgba(190, 60, 91, 0.65);
+
+    border-radius: 28px;
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(120, 48, 55, 0.25),
+
+        0 5px 15px
+        rgba(232, 111, 72, 0.15);
+
+    position: relative;
+
+    z-index: 1;
+
+    animation:
+        appear 0.8s ease;
+}
+
+
+/* =========================
+   CARD FLOWERS
+========================= */
+
+.letter::before {
+
+    content: "✿";
+
+    position: absolute;
+
+    top: 18px;
+    left: 25px;
+
+    font-size: 25px;
+
+    color: #c91f61;
+
+    transform: rotate(-12deg);
+
+}
+
+
+.letter::after {
+
+    content: "❀";
+
+    position: absolute;
+
+    bottom: 18px;
+    right: 25px;
+
+    font-size: 25px;
+
+    color: #e8754e;
+
+    transform: rotate(10deg);
+
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart {
+
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #c51d62;
+
+    margin-bottom: 10px;
+
+    animation:
+        heartbeat 2s ease-in-out infinite;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+
+    text-align: center;
+
+    font-family:
+        "Playfair Display", serif;
+
+    font-size: 43px;
+
+    font-weight: 600;
+
+    color: #b62b59;
+
+    margin-bottom: 30px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   TITLE FLOWERS
+========================= */
+
+h1::before {
+
+    content: "✿ ";
+
+    color: #ed704d;
+
+}
+
+h1::after {
+
+    content: " ✿";
+
+    color: #8b8c38;
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #654c4c;
+}
+
+
+.message p {
+
+    margin-bottom: 18px;
+
+}
+
+
+/* FIRST MESSAGE */
+
+.message p:first-child {
+
+    color: #a52e56;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+
+    display: block;
+
+    width: fit-content;
+
+    margin:
+        30px auto 0;
+
+    padding:
+        12px 22px;
+
+    background:
+        #e86d78;
+
+    color:
+        #fff7ee;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    border:
+        1px solid #c95364;
+
+    box-shadow:
+        0 5px 12px
+        rgba(171, 52, 74, 0.18);
+
+    transition:
+        0.3s ease;
+}
+
+
+.back:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        #c53b69;
+
+}
+
+
+/* =========================
+   FLOATING FLOWERS
+========================= */
+
+.flower {
+
+    position: fixed;
+
+    font-size: 22px;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        floatAround 5s ease-in-out infinite;
+}
+
+.flower.one {
+
+    top: 25%;
+    left: 7%;
+
+    color: #d52e70;
+
+}
+
+.flower.two {
+
+    top: 38%;
+    right: 7%;
+
+    color: #ed784c;
+
+    animation-delay: 1s;
+
+}
+
+.flower.three {
+
+    bottom: 25%;
+    left: 8%;
+
+    color: #858a38;
+
+    animation-delay: 2s;
+
+}
+
+.flower.four {
+
+    bottom: 35%;
+    right: 8%;
+
+    color: #b72c59;
+
+    animation-delay: 1.5s;
+
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.12);
+
+    }
+
+}
+
+
+@keyframes floatFlowers {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-8deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px)
+            rotate(5deg);
+
+    }
+
+}
+
+
+@keyframes floatAround {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .letter {
+
+        padding:
+            30px 25px;
+
+    }
+
+
+    h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .message {
+
+        font-size: 15px;
+
+    }
+
+
+    body::before,
+    body::after {
+
+        font-size: 18px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .letter::before,
+    .letter::after {
+
+        font-size: 18px;
+
+    }
+
+
+    .flower {
+
+        font-size: 17px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- FLOATING FLOWERS -->
+
+<div class="flower one">✿</div>
+
+<div class="flower two">❀</div>
+
+<div class="flower three">✿</div>
+
+<div class="flower four">❁</div>
+
+
+<!-- LETTER -->
+
+<div class="letter">
+
+
+    <div class="heart">
+
+        ♡
+
+    </div>
+
+
+    <h1>
+
+        For Xamantha
+
+    </h1>
+
+
+    <div class="message">
+
+
+        <p>
+
+            My Always Nerdy Enough,Xam
+
+        </p>
+
+
+        <p>
+
+           Xam, I don’t think I say this enough, but I’m genuinely so grateful that I have you in my life. When I think about our friendship, one of the first things that comes to mind is how much we bicker. We can argue over the smallest and most ridiculous things, annoy each other for no reason, and sometimes act more like sisters who are tired of each other than actual friends. But honestly, I think that’s one of the things that makes our friendship so special to me. Even with all the bickering, I’ve always felt comfortable being myself around you.
+        </p>
+
+
+        <p>
+
+            Thank you for always making an effort. I notice the little things you do, even the things you probably think aren’t a big deal. The times you make time for me, the times you check up on me, the times you remember something I said, and all the little ways you show that you care. I appreciate every single one of them more than I can probably explain. It means a lot knowing that, even when life gets busy, you still choose to make space for me. You’re also someone who always seems to know what to say. Sometimes I don’t even know how to explain what I’m feeling, but somehow you know how to make things feel a little lighter. Whether I need someone to listen, someone to give me advice, someone to make me laugh, or just someone to sit with me through whatever I’m going through, you always manage to be there in your own way. I don’t think you realize how comforting that can be. I’m thankful for all the conversations we’ve had, even the ones that started from something completely random and somehow turned into hours of talking. I’m thankful for all the laughs, the jokes, the little arguments, the teasing, and all the moments that might seem ordinary but became memories I’ll always remember. Even our stupidest moments are things I know I’ll look back on someday and miss. And despite how much we bicker, I hope you know that I never take our friendship for granted. You’ve become someone I can rely on, someone I can talk to, and someone I know I can be completely comfortable around. There’s a certain kind of comfort that comes from having someone who knows you, understands your personality, knows when you’re being serious and when you’re just being dramatic, and still chooses to stay. I’m also really proud of the person you are. I’ve seen different sides of you, and I’ve seen how much effort you put into the people and things that matter to you. You have such a caring heart, even if sometimes you show it through teasing, annoying me, or pretending you don’t care. I hope you never forget how much you mean to the people around you, especially to me. If there are times when you ever feel like you’re not doing enough or that no one notices your efforts, I hope you remember that I do. I see the effort you make. I see the way you make time. I see the way you care. And I hope you know that those things don’t go unnoticed. I’m really grateful that out of all the people I could have met, I got to meet someone like you. I’m grateful that our friendship became something that feels more like having a sister than just having another friend. Someone I can argue with one minute and laugh with the next. Someone I can annoy and be annoyed by, but still know that there’s genuine care underneath all of it. No matter where life takes us, I hope we never lose the friendship we have now. I hope we continue making stupid memories, having random conversations, annoying each other, and somehow finding our way through every argument like we always do. I hope that even when life gets busy and things change, we’ll always have a place in each other’s lives. Thank you for being someone who makes time for me, someone who always makes an effort, and someone who somehow always knows what to say. Thank you for being my friend, my sister-like person, and someone I can always find comfort in.
+        </p>
+
+
+        <p>
+I’ll always treasure everything we’ve shared so far, from the smallest moments to the memories that mean the most. And more than anything, I’m excited for all the memories we haven’t made yet.
+        </p>
+
+
+        <p>
+
+            — Love, Labney
+
+        </p>
+
+
+    </div>
+
+
+    <a href="index.html"
+       class="back">
+
+        ← Back to the names
+
+    </a>
+
+
+</div>
+
+
+</body>
+
+</html>
