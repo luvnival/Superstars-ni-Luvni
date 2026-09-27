@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For Elisha ♡</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    min-height: 100vh;
+     height: auto;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            #c9a5ed 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            #a98de0 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 20% 90%,
+            #e2c5f3 0%,
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 85% 90%,
+            #bca4e8 0%,
+            transparent 30%
+        ),
+
+        #f4effa;
+
+    color: #58476a;
+
+    overflow-x: hidden;
+      overflow-y: auto;
+
+    position: relative;
+
+}
+
+
+/* =========================
+   PURPLE DECORATIONS
+========================= */
+
+body::before {
+
+    content: "✦  ✧  ✦  ✧  ✦";
+
+    position: fixed;
+
+    top: 25px;
+
+    left: 25px;
+
+    font-size: 24px;
+
+    letter-spacing: 9px;
+
+    color: #8961bd;
+
+    opacity: 0.8;
+
+    transform: rotate(-7deg);
+
+    z-index: 0;
+
+}
+
+
+body::after {
+
+    content: "✧  ✦  ✧  ✦  ✧";
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    font-size: 24px;
+
+    letter-spacing: 9px;
+
+    color: #a77bd1;
+
+    opacity: 0.8;
+
+    transform: rotate(7deg);
+
+    z-index: 0;
+
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+
+    width: 100%;
+
+    max-width: 680px;
+
+    padding: 45px;
+
+    background:
+        rgba(255, 255, 255, 0.91);
+
+    border:
+        2px solid
+        rgba(178, 145, 224, 0.60);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(111, 76, 157, 0.20);
+
+    animation:
+        appear 0.8s ease;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* =========================
+   LITTLE PURPLE DETAILS
+========================= */
+
+.letter::before {
+
+    content: "✿";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 25px;
+
+    font-size: 24px;
+
+    color: #9b70c8;
+
+    transform: rotate(-12deg);
+
+}
+
+
+.letter::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 18px;
+
+    right: 25px;
+
+    font-size: 24px;
+
+    color: #7652a8;
+
+    transform: rotate(12deg);
+
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart {
+
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #8e63bd;
+
+    margin-bottom: 10px;
+
+    animation:
+        heartbeat 2s infinite;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+
+    text-align: center;
+
+    font-family:
+        "Playfair Display", serif;
+
+    font-size: 43px;
+
+    font-weight: 600;
+
+    color: #69448f;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #635570;
+
+}
+
+
+.message p {
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+
+    display: block;
+
+    width: fit-content;
+
+    margin:
+        30px auto 0;
+
+    padding:
+        12px 22px;
+
+    background:
+        #c7a9e8;
+
+    color:
+        #59347b;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+}
+
+
+.back:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        #a98bd8;
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.12);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 20px;
+
+    }
+
+
+    .letter {
+
+        padding: 30px 25px;
+
+    }
+
+
+    h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .message {
+
+        font-size: 15px;
+
+    }
+
+
+    body::before,
+    body::after {
+
+        font-size: 18px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .letter::before,
+    .letter::after {
+
+        font-size: 18px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+    <div class="letter">
+
+
+        <div class="heart">
+
+            ♡
+
+        </div>
+
+
+        <h1>
+
+            For Elisha
+
+        </h1>
+
+
+        <div class="message">
+
+
+            <p>
+
+                My bravest Girl, Shang
+
+            </p>
+
+
+            <p>
+
+                Shang, I’m really grateful that I got to know someone like you. You have such a caring and loving heart, and the way you treat the people around you is something I genuinely admire. You’re patient, understanding, and always willing to give what you can, whether it’s your time, your attention, or simply a little bit of kindness when someone needs it.
+            </p>
+
+
+            <p>
+
+                What I appreciate most about you is how you never make people feel like they’re too much. You take the time to listen and understand, even when things aren’t easy, and you always seem to have so much patience for the people you care about. Having someone who makes you feel heard and accepted is something I’ll never take for granted. Thank you for all the times you’ve shown how much you care, even through the smallest gestures. Sometimes you may not realize how much your actions mean, but I hope you know that they don’t go unnoticed. Your generosity and willingness to give to others says so much about the kind of person you are. I hope you always remember to give yourself the same love and patience that you give so freely to everyone else. You deserve to be cared for, understood, and appreciated just as much as you make others feel.
+            </p>
+
+
+            <p>
+
+I’m really lucky to have you as my friend, Elisha. Thank you for being someone with such a gentle and loving heart. I’ll always treasure the memories we’ve made, and I hope we continue creating many more together. 
+            </p>
+
+
+            <p>
+
+                — Love, Labni
+
+            </p>
+
+
+        </div>
+
+
+        <a href="index.html"
+           class="back">
+
+            ← Back to the names
+
+        </a>
+
+
+    </div>
+
+
+</body>
+
+  </html>
