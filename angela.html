@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For Angela ♡</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+     height: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            #c9b0f2 0%,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            #a9cff5 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            #dfc9f5 0%,
+            transparent 38%
+        ),
+
+        #eee9fa;
+
+    color: #51466a;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: relative;
+}
+
+
+/* =========================
+   WRITER / POET DECORATIONS
+========================= */
+
+body::before {
+    content: "✒️   📖   ✉️";
+
+    position: fixed;
+
+    top: 25px;
+
+    left: 25px;
+
+    font-size: 24px;
+
+    letter-spacing: 7px;
+
+    transform: rotate(-7deg);
+
+    opacity: 0.8;
+
+    z-index: 0;
+}
+
+
+body::after {
+    content: "🖋️   ♡   📜";
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    font-size: 24px;
+
+    letter-spacing: 6px;
+
+    transform: rotate(7deg);
+
+    opacity: 0.8;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    width: 100%;
+
+    max-width: 680px;
+
+    padding: 45px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border:
+        2px solid
+        rgba(191, 165, 235, 0.55);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(103, 65, 155, 0.20);
+
+    animation:
+        appear 0.8s ease;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   LITTLE BOOK DETAILS
+========================= */
+
+.letter::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 28px;
+
+    font-size: 22px;
+
+    color: #9670cf;
+
+    transform: rotate(-12deg);
+}
+
+
+.letter::after {
+    content: "✒";
+
+    position: absolute;
+
+    bottom: 18px;
+
+    right: 28px;
+
+    font-size: 24px;
+
+    color: #7e62b4;
+
+    transform: rotate(15deg);
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart {
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #8d5dcc;
+
+    margin-bottom: 10px;
+
+    animation:
+        heartbeat 2s infinite;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    text-align: center;
+
+    font-family:
+        "Playfair Display", serif;
+
+    font-size: 43px;
+
+    font-weight: 600;
+
+    color: #67419b;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #5d5470;
+}
+
+
+.message p {
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+    display: block;
+
+    width: fit-content;
+
+    margin:
+        30px auto 0;
+
+    padding:
+        12px 22px;
+
+    background:
+        #c9b1ee;
+
+    color:
+        #563487;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+
+.back:hover {
+    transform:
+        translateY(-3px);
+
+    background:
+        #a9c9f2;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+
+    .letter {
+        padding: 30px 25px;
+    }
+
+
+    h1 {
+        font-size: 35px;
+    }
+
+
+    .message {
+        font-size: 15px;
+    }
+
+
+    body::before,
+    body::after {
+        font-size: 18px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .letter::before,
+    .letter::after {
+        font-size: 18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+    <div class="letter">
+
+
+        <div class="heart">
+            ♡
+        </div>
+
+
+        <h1>
+            For Angela
+        </h1>
+
+
+        <div class="message">
+
+
+            <p>
+                My Dearest Comfort, Gelat
+            </p>
+
+
+            <p>
+                Gelat, we’ve had our own ups and downs, and even went through a time where we weren’t friends anymore, but somehow we found our way back to each other. I’m really glad we did.
+            </p>
+
+
+            <p>
+                You’ve always been one of the people I can find comfort in. There’s something about being around you that makes me feel like I can just be myself without having to worry about anything. Thank you for listening to me, for understanding me, for making me laugh, and for being there during the moments when I needed someone. Even the little things you do and probably don’t think much about are things I genuinely appreciate. I’m grateful for every memory we’ve made, from the random conversations and stupid laughs to the moments that probably didn’t seem important at the time but became memories I’ll always remember. I’m also grateful for everything we went through, because despite everything, we still ended up finding our way back to being friends. I’m really proud of the person you are and everything you’ve become. I hope you always remember that you deserve good things and that there will always be someone cheering you on, supporting you, and believing in you. No matter how much things change or where life takes us, I hope our friendship will always be something we can look back on and smile about..
+            </p>
+
+
+            <p>
+                Thank you for being my comfort, my friend, and someone I’m genuinely grateful to have in my life. I’ll always treasure the memories we’ve made, and I’m excited for all the memories we still have yet to make. 
+            </p>
+
+
+            <p>
+                — Love, Luvnot
+            </p>
+
+
+        </div>
+
+
+        <a href="index.html"
+           class="back">
+
+            ← Back to the names
+
+        </a>
+
+
+    </div>
+
+
+</body>
+
+</html>
