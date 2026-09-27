@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Jazmine ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+
+            font-family: "DM Sans", sans-serif;
+
+            /* Soft red background */
+            background:
+                radial-gradient(circle at 10% 20%, #f7b6b6, transparent 30%),
+                radial-gradient(circle at 90% 15%, #e88989, transparent 30%),
+                radial-gradient(circle at 50% 100%, #f4c1c1, transparent 35%),
+                #fff5f5;
+
+            color: #633333;
+
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Gingham pattern on the left and right sides */
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 120px;
+
+            background-color: #f8c4c4;
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(190, 55, 55, 0.25) 50%,
+                    transparent 50%
+                ),
+                linear-gradient(
+                    rgba(190, 55, 55, 0.25) 50%,
+                    transparent 50%
+                );
+
+            background-size: 30px 30px;
+
+            z-index: -1;
+        }
+
+        body::before {
+            left: 0;
+        }
+
+        body::after {
+            right: 0;
+        }
+
+        .letter {
+            width: 100%;
+            max-width: 680px;
+            padding: 45px;
+
+            background: rgba(255, 255, 255, 0.92);
+
+            border: 2px solid rgba(202, 76, 76, 0.35);
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 15px 40px rgba(151, 55, 55, 0.18);
+
+            animation: appear 0.8s ease;
+
+            position: relative;
+        }
+
+        /* Little decorative corners */
+        .letter::before {
+            content: "♡";
+            position: absolute;
+            top: 18px;
+            left: 23px;
+
+            font-size: 24px;
+            color: #c94f4f;
+        }
+
+        .letter::after {
+            content: "♡";
+            position: absolute;
+            bottom: 18px;
+            right: 23px;
+
+            font-size: 24px;
+            color: #e58b8b;
+        }
+
+        .heart {
+            text-align: center;
+
+            font-size: 40px;
+
+            color: #c94f4f;
+
+            margin-bottom: 10px;
+
+            animation: heartbeat 2s infinite;
+        }
+
+        h1 {
+            text-align: center;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 43px;
+
+            color: #a83f3f;
+
+            margin-bottom: 30px;
+        }
+
+        .message {
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: #704848;
+        }
+
+        .message p {
+            margin-bottom: 18px;
+        }
+
+        .back {
+            display: block;
+
+            width: fit-content;
+
+            margin: 30px auto 0;
+
+            padding: 12px 22px;
+
+            background: #e99a9a;
+
+            color: #702f2f;
+
+            text-decoration: none;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            transform: translateY(-3px);
+
+            background: #c94f4f;
+
+            color: white;
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes heartbeat {
+
+            0%,100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            body::before,
+            body::after {
+                width: 45px;
+                background-size: 22px 22px;
+            }
+
+            .letter {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            .message {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="letter">
+
+        <div class="heart">♡</div>
+
+        <h1>For Jazmine</h1>
+
+        <div class="message">
+
+            <p>My Rose, Aming</p>
+
+            <p>
+                Jaz, There are some people who make you appreciate having them in your life simply by being the kind of person they are, and I think you’re one of those people.   </p>
+
+            <p>
+                You have such a soft and kind heart, and I genuinely admire the way you care about people, understand them, and always try to see the good in everyone. Thank you for being someone who makes people feel heard and understood. You have this way of listening without making anyone feel judged, and I think that’s one of the things that makes you such a comforting person to have around. You always try to understand before judging, and that says so much about the kind of person you are. Thank you for all the little things you do, the conversations, the laughs, and the moments when you simply make things feel a little lighter. Your kindness may come naturally to you, but I hope you know that it never goes unnoticed. I’m really grateful that I got the chance to know you and see the person you are.I hope you never lose your softness or your ability to find the good in people. The world can be difficult sometimes, but I hope you continue to keep that kind heart of yours. You deserve the same kindness, care, and understanding that you’re always willing to give to others.
+            </p>
+
+            <p>I’m really proud of the person you are, ming, and I hope you always remember how much good you bring into the lives of the people around you. I’m genuinely lucky to call you my friend, and I’ll always treasure the memories we’ve made and the ones we still have yet to make. </p>
+
+            <p>— Love, Labney</p>
+
+        </div>
+
+        <a href="index.html" class="back">
+            ← Back to the names
+        </a>
+
+    </div>
+
+</body>
+
+</html>
